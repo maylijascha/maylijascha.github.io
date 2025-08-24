@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    counter-reset: cnt;
+}
+
+th, td {
+    padding: 0.5em 16px 0.5em 16px;
+}
+
+tr:nth-child(2n) {
+    background-color: #ddd;
+}
+
+button {
+    width: 100%;
+    display: block;
+    border: 2px solid green;
+    background-color: greenyellow;
+    padding: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table tbody td:first-child::before {
+    counter-increment: cnt;
+    content: counter(cnt) " ";
+}
