@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/formspree.css" rel="stylesheet">
+    <link href="css/input.css" rel="stylesheet">
+    <link href="css/radio.css" rel="stylesheet">
+    <link href="css/submit.css" rel="stylesheet">
+    <link href="css/select.css" rel="stylesheet">
+    <link href="css/checkbox.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/submit.js"></script>
+    <script src="js/formspree.js"></script>
+</head>
+
+<body>
+    <h1>Hochzeit May-Britt & Jascha</h1>
+    <h2>10.01.2026</h2>
+    <!-- action="https://formspree.io/f/mvgqnarv" -->
+    <div id="wrapper">
+        <div class="intro">
+            <p class="pe">Liebe Hochzeitsgäste,</p>
+            <p>bitte gebt unseren Trauzeugen über folgendes Formular Rückmeldung,<br />
+                wer von Euch (inkl. Kinder) mit uns diesen Tag feiern wird.</p>
+        </div>
+        <div class="spaceWrapper">
+            <div class="spacerv"></div>
+            <div class="spacerh"></div>
+        </div>
+        <form method="POST" action="https://formspree.io/f/moveaoaz">
+            <label id="numGuests-label" for="numGuests">Anzahl Gäste:</label>
+            <select id="numGuests" name="Anzahl" onchange="changeNumGuests()">
+                <option value="0">Ich/Wir komme(n) leider nicht</option>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+
+            <br />
+            <br />
+            <br />
+
+            <label id="absage-name" style="display: none;">
+                Name:
+                <br />
+                <textarea id="textAbsage" name="AbsageName" cols="60" rows="3"></textarea>
+            </label>
+
+            <div class="input-flexbox" id="guest1">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-1" id="name1" />
+                    <label for="name1" class="form__label">Name erster Gast</label>
+                </div>
+                <div id="kindLabel" class="checkbox-wrapper-13">
+                    <div><abbr title="kleine Portion">Kind ?</abbr></div>
+                    <input type="checkbox" id="kind1" name="Kind1" class="kindCheckbox"/>
+                </div>
+            </div>
+
+            <div class="input-flexbox" id="guest2">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-2" id="name2" />
+                    <label for="name2" class="form__label">Name zweiter Gast</label>
+                </div>
+                <div class="checkbox-wrapper-13">
+                    <input type="checkbox" id="kind2" name="Kind2" class="kindCheckbox"/>
+                </div>
+            </div>
+
+            <div class="input-flexbox" id="guest3">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-3" id="name3" />
+                    <label for="name3" class="form__label">Name dritter Gast</label>
+                </div>
+                <div class="checkbox-wrapper-13">
+                    <input type="checkbox" id="kind3" name="Kind3" class="kindCheckbox"/>
+                </div>
+            </div>
+
+            <div class="input-flexbox" id="guest4">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-4" id="name4" />
+                    <label for="name4" class="form__label">Name vierter Gast</label>
+                </div>
+                <div class="checkbox-wrapper-13">
+                    <input type="checkbox" id="kind4" name="Kind4" class="kindCheckbox"/>
+                </div>
+            </div>
+
+            <div class="input-flexbox" id="guest5">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-5" id="name5" />
+                    <label for="name5" class="form__label">Name fünfter Gast</label>
+                </div>
+                <div class="checkbox-wrapper-13">
+                    <input type="checkbox" id="kind5" name="Kind5" class="kindCheckbox"/>
+                </div>
+            </div>
+
+            <div class="input-flexbox" id="guest6">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-6" id="name6" />
+                    <label for="name6" class="form__label">Name sechster Gast</label>
+                </div>
+                <div class="checkbox-wrapper-13">
+                    <input type="checkbox" id="kind6" name="Kind6" class="kindCheckbox"/>
+                </div>
+            </div>
+
+            <div class="input-flexbox" id="guest7">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-7" id="name7" />
+                    <label for="name7" class="form__label">Name siebter Gast</label>
+                </div>
+                <div class="checkbox-wrapper-13">
+                    <input type="checkbox" id="kind7" name="Kind7" class="kindCheckbox"/>
+                </div>
+            </div>
+
+            <div class="input-flexbox" id="guest8">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="" name="Name-8" id="name8" />
+                    <label for="name8" class="form__label">Name achter Gast</label>
+                </div>
+                <div class="checkbox-wrapper-13">
+                    <input type="checkbox" id="kind8" name="Kind8" class="kindCheckbox"/>
+                </div>
+            </div>
+
+            <br />
+            <br />
+
+            <label id="mitbringsel">
+                Über einen kulinarischen Beitrag zum Sektempfang (Fingerfood / trockener Kuchen) würden wir uns freuen.
+                <br />
+                <textarea id="textMitbringsel" name="Mitbringsel" cols="60" rows="3" placeholder="Was?"></textarea>
+            </label>
+
+            <div id="mitbringsel-trenner" class="spaceWrapper">
+                <div class="spacerv"></div>
+                <div class="spacerh"></div>
+            </div>
+
+            <label id="geschenke">
+                Wenn ihr uns etwas schenken möchtet würden wir uns über eine finanzielle Unterstützung zur Hochzeit freuen.
+                <br />
+                Gerne dürft ihr uns aber auch etwas schenken.
+                <br />
+                Orientiert euch dabei gerne an dem Hochzeits Tisch auf der folgenden Internet Seite.
+                <br />
+                <img src="qr/qr-hochzeit-tisch.png" alt="qr-hochzeit-tisch" width="200" height="200"></img>
+                <br />
+                Das Passwort für den Hochzeits Tisch steht auf der Einladungskarte.
+            </label>
+
+            <div id="geschenke-trenner" class="spaceWrapper">
+                <div class="spacerv"></div>
+                <div class="spacerh"></div>
+            </div>
+
+            <label for="email">Eure E-Mail Adresse:</label>
+            <br />
+            <input name="E-Mail" type="email" id="email">
+
+            <div class="spaceWrapper">
+                <div class="spacerv"></div>
+                <div class="spacerh"></div>
+            </div>
+
+            <button id="btn" type="submit">
+                <i id="sendicon" class="fa fa-paper-plane-o"></i>
+                Absenden
+            </button>
+        </form>
+        <div class="corner-top"></div>
+        <div class="corner-right"></div>
+        <div class="corner-bottom"></div>
+        <div class="corner-left"></div>
+    </div>
+
+</body>
+
+</html>
